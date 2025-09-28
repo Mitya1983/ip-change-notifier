@@ -2,7 +2,7 @@
 
 SCRIPT_DIR=$HOME/.ip-change-notifier
 
-mkdir -p "$SCRIPT_DIR"
+mkdir -p "$SCRIPT_DIR" || { echo "failed to create working directory"; exit 1; }
 
 [[ -f ip-checker.sh ]] || { echo "ip-checker.sh not found"; exit 1; }
 
